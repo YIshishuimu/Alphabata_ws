@@ -1,0 +1,55 @@
+[0.354s] Invoking command in '/home/yxm/ros2_ws/src/AAAmodel': CONDA_PROMPT_MODIFIER=(ros_env) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/yxm/ros2_ws/build/AAAmodel/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/AAAmodel build --build-base /home/yxm/ros2_ws/build/AAAmodel/build install --record /home/yxm/ros2_ws/build/AAAmodel/install.log --single-version-externally-managed install_data
+[0.476s] running egg_info
+[0.476s] creating ../../build/AAAmodel/AAAmodel.egg-info
+[0.484s] writing ../../build/AAAmodel/AAAmodel.egg-info/PKG-INFO
+[0.484s] writing dependency_links to ../../build/AAAmodel/AAAmodel.egg-info/dependency_links.txt
+[0.484s] writing entry points to ../../build/AAAmodel/AAAmodel.egg-info/entry_points.txt
+[0.484s] writing requirements to ../../build/AAAmodel/AAAmodel.egg-info/requires.txt
+[0.484s] writing top-level names to ../../build/AAAmodel/AAAmodel.egg-info/top_level.txt
+[0.484s] writing manifest file '../../build/AAAmodel/AAAmodel.egg-info/SOURCES.txt'
+[0.499s] reading manifest file '../../build/AAAmodel/AAAmodel.egg-info/SOURCES.txt'
+[0.500s] writing manifest file '../../build/AAAmodel/AAAmodel.egg-info/SOURCES.txt'
+[0.500s] running build
+[0.500s] running build_py
+[0.500s] creating /home/yxm/ros2_ws/build/AAAmodel/build
+[0.500s] creating /home/yxm/ros2_ws/build/AAAmodel/build/lib
+[0.500s] creating /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+[0.501s] copying AAAmodel/vision_node.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+[0.501s] copying AAAmodel/game.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+[0.501s] copying AAAmodel/__init__.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+[0.501s] copying AAAmodel/model.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+[0.501s] copying AAAmodel/ai_node.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+[0.501s] copying AAAmodel/AlphaBataBot.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+[0.501s] running install
+[0.503s] running install_lib
+[0.511s] creating /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+[0.511s] copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/vision_node.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+[0.512s] copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/game.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+[0.512s] copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/__init__.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+[0.512s] copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/model.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+[0.512s] copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/ai_node.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+[0.512s] copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/AlphaBataBot.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+[0.512s] byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/vision_node.py to vision_node.cpython-312.pyc
+[0.513s] byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/game.py to game.cpython-312.pyc
+[0.513s] byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/__init__.py to __init__.cpython-312.pyc
+[0.513s] byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/model.py to model.cpython-312.pyc
+[0.514s] byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/ai_node.py to ai_node.cpython-312.pyc
+[0.514s] byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/AlphaBataBot.py to AlphaBataBot.cpython-312.pyc
+[0.515s] running install_data
+[0.515s] creating /home/yxm/ros2_ws/install/AAAmodel/share/ament_index
+[0.515s] creating /home/yxm/ros2_ws/install/AAAmodel/share/ament_index/resource_index
+[0.515s] creating /home/yxm/ros2_ws/install/AAAmodel/share/ament_index/resource_index/packages
+[0.515s] copying resource/AAAmodel -> /home/yxm/ros2_ws/install/AAAmodel/share/ament_index/resource_index/packages
+[0.515s] copying package.xml -> /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel
+[0.515s] creating /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel/launch
+[0.515s] copying launch/start_game.launch.py -> /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel/launch
+[0.515s] creating /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel/model
+[0.515s] copying model/shell_best-set.pt -> /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel/model
+[0.521s] copying model/kfs_best-set.pt -> /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel/model
+[0.523s] running install_egg_info
+[0.532s] Copying ../../build/AAAmodel/AAAmodel.egg-info to /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel-0.0.1-py3.12.egg-info
+[0.532s] running install_scripts
+[0.585s] Installing tactical_ai script to /home/yxm/ros2_ws/install/AAAmodel/lib/AAAmodel
+[0.585s] Installing yolo_detector script to /home/yxm/ros2_ws/install/AAAmodel/lib/AAAmodel
+[0.585s] writing list of installed files to '/home/yxm/ros2_ws/build/AAAmodel/install.log'
+[0.597s] Invoked command in '/home/yxm/ros2_ws/src/AAAmodel' returned '0': CONDA_PROMPT_MODIFIER=(ros_env) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/yxm/ros2_ws/build/AAAmodel/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/AAAmodel build --build-base /home/yxm/ros2_ws/build/AAAmodel/build install --record /home/yxm/ros2_ws/build/AAAmodel/install.log --single-version-externally-managed install_data

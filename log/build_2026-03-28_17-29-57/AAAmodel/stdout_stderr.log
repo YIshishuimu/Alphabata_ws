@@ -1,0 +1,50 @@
+running egg_info
+creating ../../build/AAAmodel/AAAmodel.egg-info
+writing ../../build/AAAmodel/AAAmodel.egg-info/PKG-INFO
+writing dependency_links to ../../build/AAAmodel/AAAmodel.egg-info/dependency_links.txt
+writing entry points to ../../build/AAAmodel/AAAmodel.egg-info/entry_points.txt
+writing requirements to ../../build/AAAmodel/AAAmodel.egg-info/requires.txt
+writing top-level names to ../../build/AAAmodel/AAAmodel.egg-info/top_level.txt
+writing manifest file '../../build/AAAmodel/AAAmodel.egg-info/SOURCES.txt'
+reading manifest file '../../build/AAAmodel/AAAmodel.egg-info/SOURCES.txt'
+writing manifest file '../../build/AAAmodel/AAAmodel.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/yxm/ros2_ws/build/AAAmodel/build
+creating /home/yxm/ros2_ws/build/AAAmodel/build/lib
+creating /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+copying AAAmodel/vision_node.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+copying AAAmodel/__init__.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+copying AAAmodel/model.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+copying AAAmodel/ai_node.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+copying AAAmodel/AlphaBataBot.py -> /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel
+running install
+running install_lib
+creating /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/vision_node.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/__init__.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/model.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/ai_node.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+copying /home/yxm/ros2_ws/build/AAAmodel/build/lib/AAAmodel/AlphaBataBot.py -> /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/vision_node.py to vision_node.cpython-312.pyc
+byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/model.py to model.cpython-312.pyc
+byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/ai_node.py to ai_node.cpython-312.pyc
+byte-compiling /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/AlphaBataBot.py to AlphaBataBot.cpython-312.pyc
+running install_data
+creating /home/yxm/ros2_ws/install/AAAmodel/share/ament_index
+creating /home/yxm/ros2_ws/install/AAAmodel/share/ament_index/resource_index
+creating /home/yxm/ros2_ws/install/AAAmodel/share/ament_index/resource_index/packages
+copying resource/AAAmodel -> /home/yxm/ros2_ws/install/AAAmodel/share/ament_index/resource_index/packages
+copying package.xml -> /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel
+creating /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel/launch
+copying launch/start_game.launch.py -> /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel/launch
+creating /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel/model
+copying model/shell_best-set.pt -> /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel/model
+copying model/kfs_best-set.pt -> /home/yxm/ros2_ws/install/AAAmodel/share/AAAmodel/model
+running install_egg_info
+Copying ../../build/AAAmodel/AAAmodel.egg-info to /home/yxm/ros2_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel-0.0.1-py3.12.egg-info
+running install_scripts
+Installing tactical_ai script to /home/yxm/ros2_ws/install/AAAmodel/lib/AAAmodel
+Installing yolo_detector script to /home/yxm/ros2_ws/install/AAAmodel/lib/AAAmodel
+writing list of installed files to '/home/yxm/ros2_ws/build/AAAmodel/install.log'

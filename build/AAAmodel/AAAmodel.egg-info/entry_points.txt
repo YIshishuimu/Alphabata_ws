@@ -1,0 +1,3 @@
+[console_scripts]
+tactical_ai = AAAmodel.ai_node:main
+yolo_detector = AAAmodel.vision_node:main
