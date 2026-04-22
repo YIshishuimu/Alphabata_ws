@@ -1,0 +1,25 @@
+[0.774s] Invoking command in '/home/yxm/Alphabata_ws/src/AAAmodel': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/yxm/Alphabata_ws/build/AAAmodel/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yxm/Alphabata_ws/install/AAAmodel/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/AAAmodel build --build-base /home/yxm/Alphabata_ws/build/AAAmodel/build install --record /home/yxm/Alphabata_ws/build/AAAmodel/install.log --single-version-externally-managed install_data
+[1.003s] running egg_info
+[1.017s] writing ../../build/AAAmodel/AAAmodel.egg-info/PKG-INFO
+[1.017s] writing dependency_links to ../../build/AAAmodel/AAAmodel.egg-info/dependency_links.txt
+[1.017s] writing entry points to ../../build/AAAmodel/AAAmodel.egg-info/entry_points.txt
+[1.017s] writing requirements to ../../build/AAAmodel/AAAmodel.egg-info/requires.txt
+[1.017s] writing top-level names to ../../build/AAAmodel/AAAmodel.egg-info/top_level.txt
+[1.045s] reading manifest file '../../build/AAAmodel/AAAmodel.egg-info/SOURCES.txt'
+[1.046s] writing manifest file '../../build/AAAmodel/AAAmodel.egg-info/SOURCES.txt'
+[1.046s] running build
+[1.046s] running build_py
+[1.046s] copying AAAmodel/vision_node.py -> /home/yxm/Alphabata_ws/build/AAAmodel/build/lib/AAAmodel
+[1.046s] running install
+[1.051s] running install_lib
+[1.065s] copying /home/yxm/Alphabata_ws/build/AAAmodel/build/lib/AAAmodel/vision_node.py -> /home/yxm/Alphabata_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel
+[1.066s] byte-compiling /home/yxm/Alphabata_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel/vision_node.py to vision_node.cpython-312.pyc
+[1.067s] running install_data
+[1.068s] running install_egg_info
+[1.082s] removing '/home/yxm/Alphabata_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel-0.0.1-py3.12.egg-info' (and everything under it)
+[1.083s] Copying ../../build/AAAmodel/AAAmodel.egg-info to /home/yxm/Alphabata_ws/install/AAAmodel/lib/python3.12/site-packages/AAAmodel-0.0.1-py3.12.egg-info
+[1.083s] running install_scripts
+[1.179s] Installing tactical_ai script to /home/yxm/Alphabata_ws/install/AAAmodel/lib/AAAmodel
+[1.179s] Installing yolo_detector script to /home/yxm/Alphabata_ws/install/AAAmodel/lib/AAAmodel
+[1.179s] writing list of installed files to '/home/yxm/Alphabata_ws/build/AAAmodel/install.log'
+[1.201s] Invoked command in '/home/yxm/Alphabata_ws/src/AAAmodel' returned '0': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/yxm/Alphabata_ws/build/AAAmodel/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yxm/Alphabata_ws/install/AAAmodel/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/AAAmodel build --build-base /home/yxm/Alphabata_ws/build/AAAmodel/build install --record /home/yxm/Alphabata_ws/build/AAAmodel/install.log --single-version-externally-managed install_data
