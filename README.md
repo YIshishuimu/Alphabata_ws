@@ -1,75 +1,68 @@
-AAAmodel: 基于 YOLO 的井字棋视觉识别与博弈决策系统
-本项目是一个集成了 深度学习物体检测 与 传统博弈算法 的 ROS 2 智能决策系统。系统能够通过摄像头实时识别井字棋盘状态（九宫格），并利用 Alpha-Beta 剪枝算法计算出 AI 的最优下一步走法。
+# Alphabata Tactical AI & Vision System
 
-🌟 核心功能
-双模型视觉推理：采用 YOLOv8 掩码模型（Mask）检测棋盘网格，并结合 OBB（旋转框）模型检测棋子。
+本项目是一个基于 ROS 2 (Jazzy) 的战术井字棋机器人视觉感知与 AI 决策系统。通过外接 USB 摄像头识别棋盘状态，利用 YOLO 模型提取特征，并使用 Alpha-Beta 剪枝算法进行实时博弈决策。
 
-实时颜色分析：在 HSV 空间下对棋子进行颜色识别（红/蓝），并精准映射到 3x3 矩阵。
+---
 
-高阶 AI 决策：内置 Alpha-Beta 剪枝算法，支持深层搜索以确保 AI 做出最优落子选择。
+## 🕹️ 常用快捷指令 (快速复制区)
 
-完全 ROS 2 集成：基于 ROS 2 Jazzy 架构，实现标准化的节点间通信。
+以下指令均假设您已打开一个新的终端。
 
-🛠️ 环境准备
-由于 ROS 2 Jazzy (Ubuntu 24.04) 对 Python 环境有严格要求，请确保按照以下步骤配置：
+**1. 🚀 一键启动系统 (包含驱动、视觉、AI)**
+\`\`\`bash
+cd ~/Alphabata_ws && ./start.sh
+\`\`\`
 
-1. 解决 NumPy 版本冲突 (核心)
-ROS 2 的 cv_bridge 依赖 NumPy 1.x。如果系统自动安装了 NumPy 2.x，会导致节点崩溃。
+**2. 📺 查看实时监控画面 (YOLO检测框)**
+\`\`\`bash
+conda deactivate && source /opt/ros/jazzy/setup.bash
+ros2 run rqt_image_view rqt_image_view
+\`\`\`
+*(注：打开后，请在左上角下拉菜单中选择 `/vision/result_image`)*
 
-Bash
+**3. 🧠 查看 AI 决策与棋盘矩阵 (终端输出)**
+\`\`\`bash
+conda deactivate && source /opt/ros/jazzy/setup.bash
+ros2 topic echo /vision/matrix
+\`\`\`
 
-# 强制降级系统 NumPy 以修复 ABI 冲突
-```/usr/bin/python3 -m pip install "numpy<2" --break-system-packages```
-2. 安装必要库
-Bash
+---
 
-```/usr/bin/python3 -m pip install ultralytics opencv-python --break-system-packages```
-📥 安装与编译
-在你的工作空间（例如 Alphabata_ws）下执行：
+## 📂 核心模块体系
 
-Bash
+本工作空间下的 `AAAmodel` 包包含以下核心文件结构与节点：
 
-# 进入工作空间
-```cd ~/Alphabata_ws```
+* **视觉感知层 (`vision_node.py`)**
+  * **节点名称**: `yolo_detector`
+  * **功能**: 订阅摄像头图像，调用本地 `.pt` 权重文件进行推理，提取并发布 3x3 棋盘颜色矩阵状态 (`/vision/matrix`) 以及可视化渲染图像 (`/vision/result_image`)。
+* **逻辑决策层 (`ai_node.py`)**
+  * **节点名称**: `tactical_ai`
+  * **功能**: 订阅视觉节点发布的矩阵数据，实例化 `game.py` 中的博弈环境，并调用 `AlphaBataBot.py` 进行深度树搜索，输出最佳落子策略。
+* **启动管理 (`start_game.launch.py`)**
+  * 统筹管理所有节点，支持一键拉起底层硬件驱动 (`v4l2_camera`)、视觉节点和 AI 决策节点。
 
-# 清理旧的编译产物（推荐）
-```rm -rf build/ install/ log/```
+## 🛠️ 环境依赖
 
-# 编译项目
-```colcon build --packages-select AAAmodel```
+* **操作系统**: Ubuntu 24.04
+* **ROS 版本**: ROS 2 Jazzy
+* **硬件设备**: 外部 USB 摄像头 (默认挂载于 `/dev/video2`)
+* **Python 依赖**: `ultralytics`, `opencv-python`, `numpy` (确保在系统环境中安装，而非 Conda 环境)
 
-# 刷新环境变量
-```source install/setup.bash```
-🚀 启动指南
-1. 启动完整系统
-运行 Launch 文件将同时开启视觉处理节点和 AI 决策节点：
+## 🚀 编译指南
 
-Bash
+每次修改 Python 代码后，请在工作空间根目录重新编译以更新 `install` 文件夹：
+\`\`\`bash
+# 务必确保已退出 conda 环境
+conda deactivate
+cd ~/Alphabata_ws
+colcon build --packages-select AAAmodel
+source install/setup.bash
+\`\`\`
 
-```ros2 launch AAAmodel start_game.launch.py```
-2. 验证输出
-视觉图像：查看话题 /vision/result_image 获取检测结果画面。
+## ⚠️ 避坑指南 / 注意事项
 
-矩阵数据：终端查看话题 /vision/matrix 获取 1x9 棋盘数组。
-
-AI 决策：AI 节点（ai_engine）会在终端直接打印推荐的落子坐标（Row, Col）。
-
-📂 项目目录结构
-Plaintext
-    ```Alphabata_ws/src/AAAmodel/
-   ├── AAAmodel/               # Python 源代码目录
-   │   ├── vision_node.py      # 视觉处理：图像 -> 矩阵
-   │   ├── ai_node.py          # AI 包装：接收矩阵 -> 调用算法
-   │   └── AlphaBataBot.py     # 核心算法：Alpha-Beta 剪枝实现
-   ├── launch/                 # ROS 2 Launch 文件
-   ├── model/                  # YOLO 权重文件 (.pt)
-   │   ├── shell_best-set.pt   # 棋盘网格检测模型
-   │   └── kfs_best-set.pt     # 棋子 OBB 检测模型
-   ├── package.xml             # 依赖声明
-   └── setup.py                # 资源安装配置（包含模型路径映射）```
-⚠️ 开发者笔记
-Python 版本一致性：请确保在 Python 3.12（系统默认）下编译和运行。若激活了 Python 3.10 的 Conda 环境，会导致 C 扩展库加载失败。
-
-路径加载：本项目使用 get_package_share_directory 动态获取模型路径，请勿修改 model/ 文件夹的相对位置。
-
-坐标映射：矩阵下标 0-8 分别对应九宫格从左到右、从上到下的位置。
+1. **Conda 冲突**: ROS 2 的底层 C++ 绑定 (`_rclpy_pybind11`) 依赖于系统自带的 Python 3.12。请务必在运行任何 `ros2` 工具前确保 `(base)` 环境已关闭 (`conda deactivate`)。
+2. **摄像头权限**: 如果一键启动时驱动节点报错 `Permission denied`，请赋予 USB 摄像头节点读写权限：
+   \`\`\`bash
+   sudo chmod 777 /dev/video2
+   \`\`\`
